@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+aside {
+    display: flex;
+    justify-content: space-between;
+    background: var(--secondary);
+    padding: 0.3rem 1rem;
+}
+
+aside a {
+    display: flex;
+    align-items: center;
+    color: var(--primary-text);
+}
+
+aside a i {
+    margin-right: 0.5rem;
+}
+
+aside p {
+    color: #fff; 
+    margin: 0;
+}
+
+aside .contacts {
+    display: flex;
+    flex-direction: row;
+}
+
+aside .contacts a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+nav {
+    padding: 1.5rem 1rem;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a,
+nav h3 {
+    color: var(--primary-text);
+    margin: 0;
+}
+
+nav a:hover {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+nav .links a:not(:last-child) {
+    margin-right: 1rem;
+}
+
+main {
+    margin: 0 10rem;
+}
+
+section#hero {
+    display: flex;
+}
+
+section#hero .image {
+    width: 40%;
+}
+
+section#hero .image img {
+    width: 100%;
+}
+
+section#hero .description {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+section#skills .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+section#skills .grid .card {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+section#skills .grid .card .card-image {
+    width: 40%;
+    aspect-ratio: 1/1;
+}
+
+section#skills .grid .card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+
+section#skills .grid .card h6,
+section#skills .grid .card p {
+    margin: 0;
+}
+
+section#recommendations .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+section#recommendations .grid .card {
+    /* height: 200px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    font-style: italic;
+    border: 1px solid #888;
+    border-radius: 15px;
+}
+
+section#recommendations form {
+    align-items: center;
+}
+
+section#recommendations form input,
+section#recommendations form textarea {
+    width: 70%;
+    margin: 0.5rem 0;
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+section#recommendations form button {
+    width: 30%;
+    padding: 0.5rem 0;
+    background: var(--primary-text);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    font-weight: 600;
+    margin: 3rem 0;
+    transition: all 0.3s ease;
+}
+
+section#recommendations form button:hover {
+    background: var(--primary);
+    color: var(--primary-text);
+}
+
+h1 {
+    color: var(--primary);
+}
+
+a {
+    text-decoration: none;
+}
+
+#navUp {
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    font-size: 2rem;
+    background: var(--primary);
+    color: var(--primary-text);
+    border: none;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+#navUp:active {
+    transform: scale(80%);
+}
+
+#navUp i {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#navUp i::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand a {
+    line-height: 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: 998;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    padding: 3rem;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.modal h5 {
+    color: #2cbc63;
+}
+
+.modal button {
+  background: #555;
+  color: var(--primary-text);
+  padding: 0.5rem;
+  width: 40%;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px
+}
+
+:root {
+    --primary: #3dafe0;
+    --primary-text: #fff;
+    --secondary: #2185c4;
+}
